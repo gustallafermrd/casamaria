@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-bright": "#fcf9f2",
+            "tertiary-container": "#593300",
+            "surface-container": "#f0eee7",
+            "on-tertiary-fixed-variant": "#683d00",
+            "surface-tint": "#3f6653",
+            "on-primary-fixed-variant": "#274e3d",
+            "primary": "#012d1d",
+            "outline-variant": "#c1c8c2",
+            "on-background": "#1c1c18",
+            "on-surface": "#1c1c18",
+            "surface-container-low": "#f6f3ec",
+            "outline": "#717973",
+            "on-secondary-fixed": "#400101",
+            "error-container": "#ffdad6",
+            "background": "#fcf9f2",
+            "on-primary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#ffdad5",
+            "primary-fixed": "#c1ecd4",
+            "on-tertiary-container": "#ed9101",
+            "surface-dim": "#dcdad3",
+            "surface-container-highest": "#e5e2db",
+            "tertiary": "#3b2000",
+            "on-primary-container": "#86af99",
+            "primary-container": "#1b4332",
+            "primary-fixed-dim": "#a5d0b9",
+            "on-tertiary": "#ffffff",
+            "on-error-container": "#93000a",
+            "tertiary-fixed-dim": "#ffb86b",
+            "on-secondary": "#ffffff",
+            "inverse-on-surface": "#f3f0ea",
+            "inverse-primary": "#a5d0b9",
+            "on-surface-variant": "#414844",
+            "surface": "#fcf9f2",
+            "secondary": "#9b4338",
+            "on-tertiary-fixed": "#2c1700",
+            "on-secondary-container": "#75271f",
+            "surface-variant": "#e5e2db",
+            "surface-container-high": "#ebe8e1",
+            "inverse-surface": "#31312c",
+            "secondary-fixed-dim": "#ffb4a9",
+            "on-secondary-fixed-variant": "#7c2c23",
+            "tertiary-fixed": "#ffdcbc",
+            "secondary-container": "#fd8f81",
+            "on-primary-fixed": "#002114",
+            "on-error": "#ffffff",
+            "error": "#ba1a1a"
+          },
+          fontFamily: {
+            "headline": ["Noto Serif"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .glass-nav {
+      background: rgba(252, 249, 242, 0.7);
+      backdrop-filter: blur(20px);
+    }
+
+    .text-balance {
+      text-wrap: balance;
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-secondary/30">
+  <!-- Top Navigation Shell -->
+  <nav class="fixed top-0 w-full z-50 bg-[#fcf9f2]/70 dark:bg-[#1c1c18]/70 backdrop-blur-md">
+    <div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+      <a class="font-['Noto_Serif'] font-black text-[#012d1d] dark:text-[#f6f3ec] italic tracking-tighter text-2xl"
+        href="#">Casa María</a>
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <a class="text-[#012d1d] dark:text-[#ffffff] transition-colors duration-300" href="/index.html">Inicio</a>
+        <a class="text-[#414844] dark:text-[#e5e2db] font-medium hover:text-[#1b4332] transition-colors duration-300"
+          href="/legado.html">Legado</a>
+        <a class="text-[#414844] dark:text-[#e5e2db] border-b-2 border-[#012d1d] pb-1 font-['Noto_Serif'] font-bold tracking-tight text-lg hover:text-[#1b4332] transition-colors duration-300"
+          href="#">Habitaciones</a>
+        <a class="text-[#414844] dark:text-[#e5e2db] font-medium hover:text-[#1b4332] transition-colors duration-300"
+          href="/entomologia.html">Entomología</a>
+      </div>
+      <!-- Mobile Menu Toggle -->
+      <button class="md:hidden text-primary">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <header class="relative h-[921px] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img alt="Bosque nuboso Casa María" class="w-full h-full object-cover scale-105"
+        data-alt="Cinematic wide shot of a misty tropical cloud forest at dawn with lush green ferns and towering ancient trees in soft light"
+        src="/img/hero-posada.jpg" />
+      <div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+    </div>
+    <div class="relative z-10 text-center max-w-4xl px-6">
+      <span
+        class="inline-block px-4 py-1 mb-6 bg-tertiary-fixed text-on-tertiary-fixed rounded-full text-xs font-bold uppercase tracking-widest">El
+        Archivo Botánico</span>
+      <h1 class="font-headline text-6xl md:text-8xl text-white font-black tracking-tighter mb-6 text-shadow-sm">
+        Refugios de Confort <br /> <span class="italic font-light">y Naturaleza</span>
+      </h1>
+      <p class="text-white/90 text-lg md:text-xl max-w-2xl mx-auto font-medium">
+        Seis estancias diseñadas para fundirse con el ecosistema. Un encuentro íntimo entre la arquitectura vernácula y
+        el lujo orgánico del bosque.
+      </p>
+    </div>
+  </header>
+  <!-- Room Selection: Bento-ish Grid -->
+  <main class="max-w-screen-2xl mx-auto px-8 py-24">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+      <div class="max-w-2xl">
+        <h2 class="font-headline text-5xl text-primary font-bold tracking-tight mb-4">Alojamiento de Autor</h2>
+        <p class="text-on-surface-variant text-lg">Cada habitación es un espécimen único, nombrado en honor a la flora
+          local y diseñado para maximizar la contemplación del paisaje sin alterar su equilibrio.</p>
+      </div>
+      <div class="hidden md:block h-px flex-grow bg-outline-variant/30 mx-12"></div>
+      <span class="font-headline italic text-secondary text-2xl">01—06</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+      <!-- Suite del Bosque -->
+      <div
+        class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low p-8 flex flex-col justify-end min-h-[500px]">
+        <img alt="Suite del Bosque"
+          class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          data-alt="Luxury boutique hotel suite with sustainable wood accents and a massive glass wall overlooking a private forest balcony"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8X6Ln2E2yJca3LWsbMHv8uXRKyRrocruTdGHXDiz1LVGEowB48F1ZzyAx9ZeBAZojFlPClg33FrL7TtlJtELrxBNYcOaPfwqw-VdroNusVfVTEy8kKlsdMI_ptA0lvIzJ_f_70__REiR1I7I4MuCnibUm24nB99D8HMWZ8HJmRuXnr8yQDzC-4xZ8mj9kb6bnZCQ6ckZ9tueM0edvL4XXWUyTNyeduCH7RElpI-J1y94C_yOLfU7SAtAZMoSI65QUhkXSY8b-IScm" />
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+        <div class="relative z-10 text-white">
+          <span class="text-xs font-bold uppercase tracking-widest text-primary-fixed mb-2 block">Capacidad: 2
+            Personas</span>
+          <h3 class="font-headline text-4xl font-bold mb-3">Suite del Bosque</h3>
+          <p class="max-w-md text-white/80 mb-6">Un santuario de cristal donde las copas de los árboles son su techo.
+            Despierte con el canto del Quetzal en un espacio de total privacidad.</p>
+          <div class="flex gap-4">
+            <span class="material-symbols-outlined text-primary-fixed">hot_tub</span>
+            <span class="material-symbols-outlined text-primary-fixed">landscape</span>
+            <span class="material-symbols-outlined text-primary-fixed">coffee</span>
+          </div>
+        </div>
+      </div>
+      <!-- Bungalow Orquídea -->
+      <div class="md:col-span-4 bg-surface-container-highest rounded-xl overflow-hidden flex flex-col">
+        <img alt="Bungalow Orquídea" class="w-full h-64 object-cover"
+          data-alt="Minimalist wooden interior of a cabin with warm lighting and artisanal textiles in terracotta colors"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLxycQchzJUFTdFWhabq_SBvMRlgmGKjzluDPKrj1G0N6X3_ATtu9G2bKe2ylOKgP3FSx-GVX-01_fSwY6upTTHr5ESffLYe1edkGhQlEE8tgJ1T9R6-YDX7iVxWIL92g9BEPHNZwFQnIDjk-sddSl--AmAPFoh81Vy8NvWhJMklEYuJTvMVkzze1VVCesdySfUdTUE_r54kL089P7Vmc0U5XnU-zepO2juRMTFlmSoz4xztklK3IGMUxlDRKQhkNMYphHo9d1bLDN" />
+        <div class="p-8">
+          <h3 class="font-headline text-2xl font-bold text-primary mb-2">Bungalow Orquídea</h3>
+          <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">Inspirado en la delicadeza de las epífitas.
+            Ideal para parejas que buscan una conexión profunda con el entorno floral.</p>
+          <ul class="space-y-2 text-xs font-bold text-on-surface-variant/70 uppercase tracking-tighter">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-full"></span> Vistas al
+              Jardín Botánico</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary rounded-full"></span> Tina de
+              Piedra Natural</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Other Rooms Mini Grid -->
+      <div
+        class="md:col-span-3 bg-surface-container-low rounded-xl p-6 flex flex-col justify-between border-b-4 border-secondary/20">
+        <div>
+          <h4 class="font-headline text-xl font-bold text-primary mb-2">Refugio del Río</h4>
+          <p class="text-sm text-on-surface-variant">El murmullo del agua como banda sonora constante. Una experiencia
+            auditiva y táctil.</p>
+        </div>
+        <div class="mt-8">
+          <span class="text-xs font-black uppercase text-secondary">3 Huéspedes</span>
+        </div>
+      </div>
+      <div class="md:col-span-3 bg-surface-container-low rounded-xl p-6 flex flex-col justify-between">
+        <div>
+          <h4 class="font-headline text-xl font-bold text-primary mb-2">Habitación Bromelia</h4>
+          <p class="text-sm text-on-surface-variant">Colorida y vibrante, situada en el ala este para capturar los
+            primeros rayos de sol.</p>
+        </div>
+        <div class="mt-8">
+          <span class="text-xs font-black uppercase text-primary">2 Huéspedes</span>
+        </div>
+      </div>
+      <div class="md:col-span-3 bg-surface-container-low rounded-xl p-6 flex flex-col justify-between">
+        <div>
+          <h4 class="font-headline text-xl font-bold text-primary mb-2">Cabaña de la Montaña</h4>
+          <p class="text-sm text-on-surface-variant">Rústica y acogedora, con chimenea de piedra y acabados en madera de
+            cedro.</p>
+        </div>
+        <div class="mt-8">
+          <span class="text-xs font-black uppercase text-secondary">4 Huéspedes</span>
+        </div>
+      </div>
+      <div
+        class="md:col-span-3 bg-surface-container-low rounded-xl p-6 flex flex-col justify-between border-b-4 border-primary/20">
+        <div>
+          <h4 class="font-headline text-xl font-bold text-primary mb-2">Estudio del Naturalista</h4>
+          <p class="text-sm text-on-surface-variant">Espacio de trabajo y descanso con biblioteca privada y mesa de
+            ilustración.</p>
+        </div>
+        <div class="mt-8">
+          <span class="text-xs font-black uppercase text-primary">1 Huésped</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Facilities Gallery Section -->
+  <section class="bg-surface-container-low py-24">
+    <div class="max-w-screen-2xl mx-auto px-8">
+      <div class="text-center mb-16">
+        <h2 class="font-headline text-5xl text-primary font-bold mb-4">Instalaciones de Inmersión</h2>
+        <div class="w-24 h-1 bg-secondary mx-auto"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <!-- Facility Item -->
+        <div class="space-y-6">
+          <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-sm">
+            <img alt="Piscina de Manantial" class="w-full h-full object-cover"
+              data-alt="An infinity pool filled with crystal clear spring water surrounded by mossy rocks and tropical jungle foliage"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFUE4313vM42gBkH6OybQWG8051Pixg_DdRwJ1I3t6S_AqEwczIVaYvwVP-xgGV5RmB8R_bozax4CTT_1XMqwXyg-1OLdXqtqLyMcIPmJjsUcn1jO0rSb3m5HxfOy53hoC1T7i02BPBPFj_WO35CQLpBwj3128NZJmrZN1jPwqofNQ5AEuC5VZEKoTaUdvkMVRRZUuMxI15lHhbIalOPOupP-9Byhk3U4el4ihVLGrJ46is3BO1WjOaExrHQMPO4AuSG5BbgotmkAg" />
+          </div>
+          <div class="px-2">
+            <h3 class="font-headline text-2xl font-bold text-primary mb-2">Piscina de Manantial</h3>
+            <p class="text-on-surface-variant leading-relaxed">Agua pura filtrada por la montaña, sin químicos,
+              integrada en el relieve natural de las rocas.</p>
+          </div>
+        </div>
+        <!-- Facility Item -->
+        <div class="space-y-6 md:mt-12">
+          <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-sm">
+            <img alt="Jacuzzi al aire libre" class="w-full h-full object-cover"
+              data-alt="Outdoor cedar wood jacuzzi steaming in the cool morning air with a view of a mountain valley"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOjn_hWh0TUEix8xgCSdA8Lo6O0mVyWYwur9N-TSvVmazyH7V4wEHSa5KolTAvTqjBgoxRRbMP7CfUK1NHKHVDIHY4FPkO74AD-fpq6DzpFne7nBPxe56U2v67owUppIMYUi6UgpGcuDK_d3CabEQK9gDeY0LyLo1XNQZOPWrZSKiyhZs2JogCJJmbYjnO6QrH_iyrbKzDvbZwOVl7MlSm2wTxUJJrh_lkxOYTnZ8wkMGwCLf4V9j4c2drpYWiMEuGtQAOeVWkWqdD" />
+          </div>
+          <div class="px-2">
+            <h3 class="font-headline text-2xl font-bold text-primary mb-2">Jacuzzi al Aire Libre</h3>
+            <p class="text-on-surface-variant leading-relaxed">Contemple las estrellas desde el calor de nuestras pozas
+              de hidromasaje bajo el dosel forestal.</p>
+          </div>
+        </div>
+        <!-- Facility Item -->
+        <div class="space-y-6">
+          <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-sm">
+            <img alt="Biblioteca Especializada" class="w-full h-full object-cover"
+              data-alt="Elegant private library with dark wood shelves filled with vintage botanical books and a leather armchair"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfd3OYhAlPi7peuZswfX4C3C96oMh8g_BIR7r8hXI07pp9XDGqSpIMbjR78Z1IoMLnHvC_-ZupiZxEUZvOt1U6AXmFgt8_Rp-OJ02z0O9c8DiHa-p_1fDrrJZ3ANRwYGIuAPHevddMGOB-hCe66Y46gTNSaNl8xmI6gRVsEoODiRgAZ8JmTXVNX_DbZUAf2veYKi9W8mJ6Upz7h9aometi-x0OOTo9u8Zt2jH1ubrk7OtmqBtRYSY4lie1fcxb71Y1olzZrijA4s2B" />
+          </div>
+          <div class="px-2">
+            <h3 class="font-headline text-2xl font-bold text-primary mb-2">Biblioteca del Archivo</h3>
+            <p class="text-on-surface-variant leading-relaxed">Una colección curada de botánica, historia natural y
+              poesía, disponible para tardes de lectura silenciosa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Gastronomy: Asymmetric Editorial -->
+  <section class="py-24 max-w-screen-2xl mx-auto px-8 overflow-hidden">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+      <div class="md:col-span-5 relative">
+        <div class="absolute -top-12 -left-12 w-48 h-48 bg-tertiary-fixed rounded-full -z-10 opacity-30"></div>
+        <img alt="Mermeladas artesanales" class="rounded-xl w-full aspect-square object-cover"
+          data-alt="Assorted artisanal fruit jams in glass jars on a rustic wooden table with fresh berries and morning sunlight"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEjYosHNz59GtPocv-gioQOHhUuVMMzq0OO1yUa1VlcsxjUbLf6mj_gDguYqtKyzhlGljsnHzJzD93goQhDXudmFTwsfQAQ_4tHzp0k_1jsrchdQ8KsUtfj8rpG_KsijcU4csCFLdi6s792iuFIFozMJEZhm4ABu_lNw0Oe8YDY7ap9e5fRwuFOSJKsvdkMuMsTWNKJxsswn6YUn0z1ePdhE8ebw8e-3ANz6UofCvwM2nigXWYnZogwvrRrHVjKCJ_NcBoZ3I_9umP" />
+      </div>
+      <div class="md:col-span-7">
+        <span class="font-headline italic text-secondary text-xl mb-4 block">Sabores de la Tierra</span>
+        <h2 class="font-headline text-5xl text-primary font-bold mb-8 tracking-tight">Cosecha y Humo</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h4 class="font-headline text-xl font-bold text-primary mb-4">Mermeladas del Huerto</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed italic">"Elaboradas en pequeñas tandas con frutos
+              recolectados a menos de 500 metros de su mesa. Nuestra mermelada de uchuva y cardamomo es el alma del
+              desayuno."</p>
+          </div>
+          <div>
+            <h4 class="font-headline text-xl font-bold text-primary mb-4">Tradición Ahumada</h4>
+            <p class="text-on-surface-variant text-sm leading-relaxed">Técnicas ancestrales utilizando maderas caídas de
+              la propiedad para curar quesos y truchas locales, brindando un perfil de sabor profundo y selvático.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services: Modern Iconography -->
+  <section class="bg-primary text-on-primary py-20 px-8">
+    <div class="max-w-screen-2xl mx-auto flex flex-wrap justify-center gap-16 text-center">
+      <div class="flex flex-col items-center gap-4">
+        <div class="w-16 h-16 rounded-full border border-on-primary/20 flex items-center justify-center">
+          <span class="material-symbols-outlined text-3xl">wifi</span>
+        </div>
+        <span class="font-headline text-xs font-bold uppercase tracking-widest">Fibra Óptica</span>
+      </div>
+      <div class="flex flex-col items-center gap-4">
+        <div class="w-16 h-16 rounded-full border border-on-primary/20 flex items-center justify-center">
+          <span class="material-symbols-outlined text-3xl">local_parking</span>
+        </div>
+        <span class="font-headline text-xs font-bold uppercase tracking-widest">Estacionamiento</span>
+      </div>
+      <div class="flex flex-col items-center gap-4">
+        <div class="w-16 h-16 rounded-full border border-on-primary/20 flex items-center justify-center">
+          <span class="material-symbols-outlined text-3xl">groups</span>
+        </div>
+        <span class="font-headline text-xs font-bold uppercase tracking-widest">Áreas Sociales</span>
+      </div>
+      <div class="flex flex-col items-center gap-4">
+        <div class="w-16 h-16 rounded-full border border-on-primary/20 flex items-center justify-center">
+          <span class="material-symbols-outlined text-3xl">concierge</span>
+        </div>
+        <span class="font-headline text-xs font-bold uppercase tracking-widest">Atención 24/7</span>
+      </div>
+    </div>
+  </section>
+  <!-- Call to Action -->
+  <section class="py-24 text-center px-8 relative">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-headline text-4xl md:text-5xl text-primary font-black mb-8">¿Listo para habitar el bosque?</h2>
+      <p class="text-on-surface-variant text-lg mb-12">Consulte nuestras fechas disponibles y permítanos preparar su
+        refugio en Casa María.</p>
+      <button
+        class="bg-secondary text-on-secondary px-10 py-5 rounded-xl font-headline font-bold text-lg uppercase tracking-widest shadow-xl hover:scale-105 transition-transform">
+        Consultar Disponibilidad
+      </button>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer
+    class="w-full py-16 px-8 mt-20 bg-[#f6f3ec] dark:bg-[#1b4332] text-[#012d1d] dark:text-[#fcf9f2] font-['Manrope'] text-sm tracking-wide">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-screen-xl mx-auto items-start text-center md:text-left">
+      <div class="space-y-4">
+        <a class="text-lg font-bold text-[#012d1d] dark:text-[#ffffff]" href="#">Casa María Ecological Inn</a>
+        <p class="opacity-80 max-w-xs mx-auto md:mx-0">Un refugio para el alma y un santuario para la biodiversidad en
+          Canoabo, Venezuela.</p>
+        <p class="font-semibold text-secondary">Canoabo, Carabobo.</p>
+      </div>
+      <div class="space-y-6">
+        <h4 class="font-bold uppercase tracking-widest text-xs">Contacto &amp; Redes</h4>
+        <div class="flex flex-col gap-3">
+          <a class="opacity-80 hover:text-[#9b4338] transition-all duration-300" href="#">WhatsApp</a>
+          <a class="opacity-80 hover:text-[#9b4338] transition-all duration-300"
+            href="https://instagram.com/posadaecologicacasamaria">Instagram @posadaecologicacasamaria</a>
+          <a class="opacity-80 hover:text-[#9b4338] transition-all duration-300" href="#">Email</a>
+          <a class="opacity-80 hover:text-[#9b4338] transition-all duration-300" href="#">Localización</a>
+        </div>
+      </div>
+      <div class="space-y-6">
+        <h4 class="font-bold uppercase tracking-widest text-xs">Ubicación</h4>
+        <div class="rounded-xl overflow-hidden h-40 grayscale hover:grayscale-0 transition-all duration-700">
+          <img alt="Map location" class="w-full h-full object-cover"
+            data-alt="Stylized map showing the location of Bejuma in Venezuela surrounded by green topographical features"
+            data-location="Bejuma, Carabobo, Venezuela"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMwEG3V6MMuwQItl1WxonY9mYrl2Mq368QrTW0LPNei3LMytq-wHLX_BVNR3W_drCOpM2CzIRiyY3TVOjY2Et62aLw5bf3Djs-YAeqtuff9lc9C1w31sB7fX-Q-n8rSR2QBVMC_XUz-t1J-bE5wRLl8qO8pThxF6aSijasDSyU-zfiv_54n_Z3c6UkCyFCWsRdzo91dX5XKfQvos48PbcsfFeeMz9zmFPDcR7OhC4z-e690UwObUeZYC2ZPDlKcB3a4AedRWuAyX8n" />
+        </div>
+        <p class="text-xs opacity-60">© Casa María Ecological Inn. Canoabo, Carabobo. Preservando el Bosque Nublado.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

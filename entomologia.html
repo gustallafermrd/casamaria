@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "inverse-primary": "#a5d0b9",
+            "on-primary-container": "#86af99",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#f6f3ec",
+            "surface-bright": "#fcf9f2",
+            "secondary-fixed": "#ffdad5",
+            "on-tertiary": "#ffffff",
+            "surface-variant": "#e5e2db",
+            "primary": "#012d1d",
+            "on-primary": "#ffffff",
+            "on-surface-variant": "#414844",
+            "on-surface": "#1c1c18",
+            "inverse-surface": "#31312c",
+            "on-tertiary-fixed": "#2c1700",
+            "surface-dim": "#dcdad3",
+            "on-primary-fixed": "#002114",
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "tertiary-fixed": "#ffdcbc",
+            "surface-tint": "#3f6653",
+            "on-tertiary-container": "#ed9101",
+            "secondary": "#9b4338",
+            "primary-container": "#1b4332",
+            "secondary-container": "#fd8f81",
+            "surface-container": "#f0eee7",
+            "secondary-fixed-dim": "#ffb4a9",
+            "primary-fixed": "#c1ecd4",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#683d00",
+            "on-secondary-container": "#75271f",
+            "on-error": "#ffffff",
+            "inverse-on-surface": "#f3f0ea",
+            "on-secondary-fixed-variant": "#7c2c23",
+            "outline-variant": "#c1c8c2",
+            "tertiary": "#3b2000",
+            "on-background": "#1c1c18",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#a5d0b9",
+            "background": "#fcf9f2",
+            "on-primary-fixed-variant": "#274e3d",
+            "on-secondary-fixed": "#400101",
+            "surface-container-high": "#ebe8e1",
+            "outline": "#717973",
+            "tertiary-fixed-dim": "#ffb86b",
+            "tertiary-container": "#593300",
+            "surface-container-highest": "#e5e2db",
+            "surface": "#fcf9f2"
+          },
+          fontFamily: {
+            "headline": ["Noto Serif"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .text-shadow-subtle {
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-surface font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 w-full z-50 bg-[#fcf9f2]/70 dark:bg-[#1c1c18]/70 backdrop-blur-md">
+    <div class="flex justify-between items-center px-8 py-6 w-full max-w-screen-2xl mx-auto">
+      <a class="font-['Noto_Serif'] font-black text-[#012d1d] dark:text-[#f6f3ec] italic tracking-tighter text-2xl"
+        href="#">Casa María</a>
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <a class="text-[#012d1d] dark:text-[#ffffff] transition-colors duration-300" href="/index.html">Inicio</a>
+        <a class="text-[#414844] dark:text-[#e5e2db] font-medium hover:text-[#1b4332] transition-colors duration-300"
+          href="/legado.html">Legado</a>
+        <a class="text-[#414844] dark:text-[#e5e2db] font-medium hover:text-[#1b4332] transition-colors duration-300"
+          href="/posada.html">Habitaciones</a>
+        <a class="text-[#414844] dark:text-[#e5e2db] border-b-2 border-[#012d1d] pb-1 font-['Noto_Serif'] font-bold tracking-tight text-lg  hover:text-[#1b4332] transition-colors duration-300"
+          href="#">Entomología</a>
+      </div>
+      <!-- Mobile Menu Toggle -->
+      <button class="md:hidden text-primary">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section class="relative h-[870px] w-full flex items-end overflow-hidden mb-20 px-4 md:px-8">
+      <div class="absolute inset-0 z-0 scale-105">
+        <img class="w-full h-full object-cover brightness-[0.85]"
+          data-alt="macro extreme close-up of a rare butterfly wing with intricate iridescent blue and green patterns against a dark forest background"
+          src="/img/entomologia-hero.jpg" />
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl pb-16">
+        <span class="font-label text-sm uppercase tracking-widest text-secondary mb-4 block">Entomología &amp;
+          Saberes</span>
+        <h1 class="font-headline text-5xl md:text-7xl text-surface-bright leading-none tracking-tight mb-6">El Archivo
+          Vivo: Sabiduría que Brota de la Tierra</h1>
+        <p class="font-headline italic text-xl md:text-2xl text-surface-container-low max-w-2xl">Un viaje al micromundo
+          del bosque nublado de Bejuma</p>
+      </div>
+    </section>
+    <!-- Registro de Especímenes (Taxonomy Gallery) -->
+    <section class="px-4 md:px-20 mb-32">
+      <div class="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-4">
+        <h2 class="font-headline text-4xl text-primary">Registro de Especímenes</h2>
+        <p class="font-label text-on-surface-variant max-w-md">Documentación técnica de la biodiversidad que habita
+          nuestro refugio forestal.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        <!-- Specimen 1: Large Asymmetric -->
+        <div class="md:col-span-7 group">
+          <div class="overflow-hidden rounded-lg mb-6 bg-surface-container-low aspect-[4/3]">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="macro photography of a Greta oto glasswing butterfly perched on a green leaf with transparent wings catching soft light"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJlUK1MuISJw6B7Jt7CA00G9-aNIMiZ72QRRqGz_N6sM_BpWlkGrVHTUHt7o-TF4eVLgWYGZ7agAiaorgiLEiBuqxyJQ_dlajZXg3-XhHS0MYFAuH4B6r5n9ibmLmFf8Zs6HxbhGdj1ipLvqABAYoZnGww3YyL7ql2kK_DgW4gPKunMXy1a-Rfe4T8uIyL1mYSVhMNSFk6AvvDtUYBAuavJ0m0FVmoxh4f3tPgQQlMa7S1nYk1DKtoSqtfJbCPX-qgkF91oZGjBCir" />
+          </div>
+          <div class="flex items-start gap-4">
+            <span
+              class="font-label text-tertiary text-xs border border-outline-variant/30 px-3 py-1 rounded-full uppercase">Lepidoptera</span>
+            <div>
+              <h3 class="font-headline text-2xl italic text-primary">Greta oto</h3>
+              <p class="text-on-surface-variant mt-2 max-w-lg leading-relaxed">Conocida como la "mariposa de cristal",
+                sus alas transparentes actúan como camuflaje natural, permitiéndole desaparecer en el denso follaje del
+                bosque nublado.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Specimen 2: Smaller Side Specimen -->
+        <div class="md:col-span-5 md:mt-24 group">
+          <div class="overflow-hidden rounded-lg mb-6 bg-surface-container-low aspect-[3/4]">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="high detail macro of a Dynastes hercules beetle with shiny metallic shell reflecting warm amber light on a textured bark background"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzkK0lYFJbfqaZqf-dt-8GNew2trIkydqzpfgxGkCMUu12XH8tgPVXqnLR8TCaNTXIvYYd8To5Q70A3jXYousQ1e3nkwy0e8-Dp-tg9AUuIAiJlylldizEqXQBSnFayFwqphNq0eAGG-957l5pyPX4hsSz5_lqbXsRi48bP3YGddMfxd9l_CMamFeh342HRM0GdC-94bE-LWVvE0l1in1QnWngDyv_qiVALhMKUakyl-jluVqr7CNdHQVhmXs7jKggQpew68o4aj9M" />
+          </div>
+          <div class="flex items-start gap-4">
+            <span
+              class="font-label text-tertiary text-xs border border-outline-variant/30 px-3 py-1 rounded-full uppercase">Coleoptera</span>
+            <div>
+              <h3 class="font-headline text-2xl italic text-primary">Dynastes hercules</h3>
+              <p class="text-on-surface-variant mt-2 leading-relaxed">Uno de los escarabajos más grandes del mundo,
+                fundamental para el ciclo de nutrientes del suelo en Bejuma.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Specimen 3: Horizontal Wide -->
+        <div class="md:col-span-8 group">
+          <div class="overflow-hidden rounded-lg mb-6 bg-surface-container-low aspect-[2/1]">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              data-alt="close-up of an Automeris metzli moth showing its distinct owl-eye patterns on the lower wings with warm orange and brown tones"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1ZiAihy6IwIYVSpuPwPF2zUpgpXOF7Md8LfjkWWopUJEDnO29NmbAUT4VKoi9HySAkqAqlSsuNhsI46VekhF4vf5uCoGgzcEzkCwzzSR0z2MxccMwPqyv_ZYMsKFzd1zfHFK5yeXFTBYfRK17Hv-DOo92q3jeuDIJ_kDZTBlf3n07NRNSjuZHQHzr0mx-NCKTYLU2bRN_b7lBQvkcG9VfSZMwxTfmAbSP70PeXzm9L2k3NQ-__RKzDRfLFbkyhkIPWGme9MWc7_y3" />
+          </div>
+          <div class="flex items-start gap-4">
+            <span
+              class="font-label text-tertiary text-xs border border-outline-variant/30 px-3 py-1 rounded-full uppercase">Saturniidae</span>
+            <div>
+              <h3 class="font-headline text-2xl italic text-primary">Automeris metzli</h3>
+              <p class="text-on-surface-variant mt-2 max-w-xl leading-relaxed">Posee ocelos espectaculares en sus alas
+                posteriores que imitan los ojos de un depredador mayor para disuadir ataques.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Biblioteca del Naturalista -->
+    <section class="bg-surface-container-low py-32 px-4 md:px-20 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div class="order-2 md:order-1 relative">
+          <div class="absolute -top-12 -left-12 w-48 h-48 bg-tertiary-fixed opacity-20 rounded-full blur-3xl"></div>
+          <div class="relative z-10 grid grid-cols-2 gap-4">
+            <img class="rounded-lg shadow-sm"
+              data-alt="vibrant detail of antique leather-bound botanical books and scientific sketches on a wooden desk with a magnifying glass"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsmx2jpuvg5XvHHAA3bJY9u-5BVF8RkhEwZd7VQdSoG_KqNB7LBIZHVfyHME0iPt7bTm_CRHeizWsJTJCvgY2G0wukeoBe-OBkqplvsCvEI8SBz5LeRZ997PTrchFWc8JMbMLA9xU9VCLjhru_6oaKIBfywevuDFyr5uIuJSDo9Mj0dH2IxsGQFKLiFkaTI1mw5gZO6Ld9a3K8RU3fHi1-nScGjTjxtQlRVLgUf6E7v0nukBZ0clZ1c1sKxfwiq6RuyrcW66ZakcVJ" />
+            <img class="rounded-lg mt-12 shadow-sm"
+              data-alt="interior of a classic scholarly library with warm lamp light reflecting on dark wood shelves and rows of old books"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiSkfSahlLimjk8X6gVQuGanQ-fGG3qR3bTBsjtxYMy4yUOQFSDNGQNdIi9x4UV9r2pKjt9Lo4oxBWV3CgUuLNkQ8RmCIxzKR3aaFAszwwU3MCgUI5zQ0MPFO4c6mZ3TLy_XOd5y6Nk2J0xNQMHiElTZe_lqeBTRqCk1Rk3NUN63ajg5vMYCew6_6FlpXpupGex3oYM8Q5JAU13DPJERONr-oEg3QWNe-X2C0A4VzRjlTc75blnQbam1ttGL6Zy3NHK2Hmdg5_LHm8" />
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <h2 class="font-headline text-4xl text-primary mb-8 leading-tight">Biblioteca del Naturalista</h2>
+          <p class="text-on-surface-variant text-lg leading-relaxed mb-6 italic">
+            "Un saber no compartido es una semilla que nunca germina."
+          </p>
+          <p class="text-on-surface-variant mb-8 leading-relaxed">
+            Nuestra colección alberga ejemplares únicos de botánica venezolana y entomología neotropical. Un refugio
+            para el estudio silencioso, donde las páginas de ayer guían la conservación de mañana.
+          </p>
+          <button class="flex items-center gap-3 text-secondary font-semibold hover:gap-5 transition-all duration-300">
+            <span>Explorar el catálogo</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Datos Técnicos & Saberes -->
+    <section class="py-32 px-4 md:px-20">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-0 bg-surface-container-highest/30 rounded-xl overflow-hidden">
+          <div class="p-12 border-r border-outline-variant/10 text-center">
+            <span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="thermostat">thermostat</span>
+            <h4 class="font-headline text-3xl text-primary mb-2">Microclima</h4>
+            <p class="font-label text-secondary tracking-widest uppercase">760 msnm</p>
+            <p class="text-on-surface-variant mt-4 text-sm">Altitud ideal para la proliferación de especies endémicas de
+              montaña.</p>
+          </div>
+          <div class="p-12 border-r border-outline-variant/10 text-center bg-surface-container-high/40">
+            <span class="material-symbols-outlined text-primary text-4xl mb-4"
+              data-icon="pest_control_rodent">pest_control_rodent</span>
+            <h4 class="font-headline text-3xl text-primary mb-2">Observación</h4>
+            <p class="font-label text-secondary tracking-widest uppercase">140+ Especies</p>
+            <p class="text-on-surface-variant mt-4 text-sm">Diversidad aviar y entomológica identificada dentro del
+              archivo vivo.</p>
+          </div>
+          <div class="p-12 text-center">
+            <span class="material-symbols-outlined text-primary text-4xl mb-4" data-icon="verified">verified</span>
+            <h4 class="font-headline text-3xl text-primary mb-2">Certificaciones</h4>
+            <div class="space-y-1">
+              <p class="font-label text-secondary tracking-widest uppercase text-xs">ISO 9001</p>
+              <p class="font-label text-secondary tracking-widest uppercase text-xs">Circuito de la Excelencia</p>
+            </div>
+            <p class="text-on-surface-variant mt-4 text-sm">Compromiso riguroso con los estándares internacionales de
+              hospitalidad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Filosofía de Conservación -->
+    <section class="py-32 px-4 md:px-20 max-w-4xl mx-auto text-center">
+      <div class="w-20 h-0.5 bg-secondary mx-auto mb-16 opacity-30"></div>
+      <div class="mb-12">
+        <span class="material-symbols-outlined text-tertiary-fixed-dim text-6xl opacity-50"
+          data-icon="format_quote">format_quote</span>
+      </div>
+      <h2 class="font-headline italic text-3xl md:text-4xl text-primary leading-relaxed mb-10">
+        "No somos los dueños de este bosque, somos sus custodios temporales. Cada ala que protegemos hoy es el vuelo que
+        verán nuestros hijos mañana."
+      </h2>
+      <div class="flex flex-col items-center">
+        <p class="font-label text-on-surface-variant uppercase tracking-[0.2em] text-sm">Norbert Flauger</p>
+        <p class="text-on-surface-variant text-xs mt-1">Fundador &amp; Visionario de la Conservación</p>
+      </div>
+      <div class="mt-20">
+        <button
+          class="bg-primary text-on-primary px-10 py-4 rounded-xl font-label text-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-md active:scale-95">
+          Unirse a la causa
+        </button>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer
+    class="w-full py-16 px-8 mt-20 bg-[#f6f3ec] dark:bg-[#1b4332] text-[#012d1d] dark:text-[#fcf9f2] font-['Manrope'] text-sm tracking-wide">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-screen-xl mx-auto items-start text-center md:text-left">
+      <div class="space-y-4">
+        <a class="text-lg font-bold text-[#012d1d] dark:text-[#ffffff]" href="#">Casa María Ecological Inn</a>
+        <p class="opacity-80 max-w-xs mx-auto md:mx-0">Un refugio para el alma y un santuario para la biodiversidad en
+          Canoabo, Venezuela.</p>
+        <p class="font-semibold text-secondary">Canoabo, Carabobo.</p>
+      </div>
+      <div class="space-y-6">
+        <h4 class="font-bold uppercase tracking-widest text-xs">Contacto &amp; Redes</h4>
+        <div class="flex flex-col gap-3">
+          <a class="opacity-80 hover:text-[#9b4338] transition-all duration-300" href="#">WhatsApp</a>
+          <a class="opacity-80 hover:text-[#9b4338] transition-all duration-300"
+            href="https://instagram.com/posadaecologicacasamaria">Instagram @posadaecologicacasamaria</a>
+          <a class="opacity-80 hover:text-[#9b4338] transition-all duration-300" href="#">Email</a>
+          <a class="opacity-80 hover:text-[#9b4338] transition-all duration-300" href="#">Localización</a>
+        </div>
+      </div>
+      <div class="space-y-6">
+        <h4 class="font-bold uppercase tracking-widest text-xs">Ubicación</h4>
+        <div class="rounded-xl overflow-hidden h-40 grayscale hover:grayscale-0 transition-all duration-700">
+          <img alt="Map location" class="w-full h-full object-cover"
+            data-alt="Stylized map showing the location of Bejuma in Venezuela surrounded by green topographical features"
+            data-location="Bejuma, Carabobo, Venezuela"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMwEG3V6MMuwQItl1WxonY9mYrl2Mq368QrTW0LPNei3LMytq-wHLX_BVNR3W_drCOpM2CzIRiyY3TVOjY2Et62aLw5bf3Djs-YAeqtuff9lc9C1w31sB7fX-Q-n8rSR2QBVMC_XUz-t1J-bE5wRLl8qO8pThxF6aSijasDSyU-zfiv_54n_Z3c6UkCyFCWsRdzo91dX5XKfQvos48PbcsfFeeMz9zmFPDcR7OhC4z-e690UwObUeZYC2ZPDlKcB3a4AedRWuAyX8n" />
+        </div>
+        <p class="text-xs opacity-60">© Casa María Ecological Inn. Canoabo, Carabobo. Preservando el Bosque Nublado.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
